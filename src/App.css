@@ -1,38 +1,51 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Phone {
+  width: 390px;
+  height: 46rem;
+  position: relative ;
+  margin: auto;
+  background: white;
+  border-radius: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar {
+  width: 390px;
+  height: 90px;
+  position: absolute;
+  border: thin solid black;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 34%);
+  border-radius: 0px 0px 20px 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.NavIcon {
+  color: #1f1e1e;
+  height: 2.5rem;
+  width: 2.5rem;
 }
-
-.App-link {
-  color: #61dafb;
+.NavIconCenter {
+  color: hsl(0, 2%, 12%);
+  height: 75px;
+  width: 75px; 
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Pot{
+  margin-top: -8px;
+}
+.Book, .Lightbulb{
+  position: absolute;
+  bottom: 14px;
+}
+.Book {
+  left: 3.5rem;
+}
+.Lightbulb {
+  right: 3.5rem;
+}
+.PageIndicator{
+  width: 52px; 
+  height: 4px; 
+  position: relative;
+  background: rgba(227.99, 27.36, 0, 0.59); 
+  border-radius: 12px;
+  left: 170px;
 }

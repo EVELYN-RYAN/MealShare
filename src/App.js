@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import book from './svg/book.svg';
+import lightbulb from './svg/lightbulb-solid.svg'
+import pot from './img/Pot.png'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Phone">
+        <div className="Navbar">
+          <div className="Pot">
+            <img src={pot} className="NavIconCenter"/>
+          </div>
+          <div className="Book">
+            <img src={book} className="NavIcon"/>
+          </div>
+          <div className="Lightbulb">
+            <img src={lightbulb} className="NavIcon"></img>
+          </div>
+          <div className="PageIndicator" style={{}} />
+        </div>
+      </div>
     </div>
   );
 }
