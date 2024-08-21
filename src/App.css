@@ -9,6 +9,10 @@
   --meals-lt-red: hsla(7, 100%, 45%, 0.59);
   --meals-shadow: rgba(0, 0, 0, 0.25);
 }
+button{
+  border-style: none;
+  background-color: rgba(0, 0, 0, 0.0);
+}
 .App {
   text-align: center;
 }
@@ -53,12 +57,27 @@
   right: 3.5rem;
 }
 .PageIndicator{
-  width: 52px; 
-  height: 4px; 
   position: relative;
   background: var(--meals-lt-red); 
   border-radius: 12px;
+  transition: 1s;
+}
+.meals{
+  width: 52px; 
+  height: 4px; 
   left: 170px;
+}
+.bookings{
+  width: 52px; 
+  height: 4px; 
+  left: 57px;
+  bottom: -5px;
+}
+.plan{
+  width: 52px; 
+  height: 4px;
+  left: 283px;
+  bottom: -5px;
 }
 .PageHeader {
   display: grid;
@@ -108,6 +127,9 @@
   .RespFam {
     color: white;
   }
+}
+.MyMealDeliveryDetails{
+  display: none;
 }
 
 .DayAbbrev {

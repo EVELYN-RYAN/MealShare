@@ -1,15 +1,13 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
-import ListMeals from '../components/ListMeals';
 const URL = `http://localhost:8080/meals`;
 
-function Meals() {
+function Bookings() {
   return (
     <div>
-        <PageHeader header="This Week's"/>
-        <ListMeals/>
+        <PageHeader header="Bookings"/>
     </div>
   )
 }
 
-export default Meals
+export default Bookings

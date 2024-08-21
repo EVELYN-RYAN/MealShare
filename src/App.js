@@ -1,94 +1,40 @@
 import './App.css';
-import Meals from './pages/Meals';
+import PageNav from './components/PageNav';
 import book from './svg/book.svg';
 import lightbulb from './svg/lightbulb-solid.svg'
 import pot from './img/Pot.png'
+import { connect } from 'react-redux'
 
-const person = {
-  "personId": 1,
-  "firstName": "Ryan",
-  "lastName": "Evelyn",
-  "family": {
-      "familyId": 1,
-      "familyName": "The Juice Es",
-      "familyMembers": [
-          1,
-          {
-              "personId": 2,
-              "firstName": "Heather",
-              "lastName": "Evelyn",
-              "family": 1,
-              "email": "heatehr@rrevelyn.com",
-              "password": "hehehe",
-              "allergy": [
-                  "mushrooms"
-              ]
-          }
-      ],
-      "address": "567 S 560 E",
-      "city": "Orem",
-      "state": "UT",
-      "zip": 84097,
-      "group": {
-          "groupId": 2,
-          "groupName": "CVP",
-          "families": [
-              1,
-              {
-                  "familyId": 3,
-                  "familyName": "The Preece's",
-                  "familyMembers": [
-                      {
-                          "personId": 4,
-                          "firstName": "Weston",
-                          "lastName": "Evelyn",
-                          "family": 3,
-                          "email": "weston@rrevelyn.com",
-                          "password": "hehehe",
-                          "allergy": [
-                              "pie"
-                          ]
-                      }
-                  ],
-                  "address": "1062 S 200 W",
-                  "city": "Orem",
-                  "state": "UT",
-                  "zip": 84058,
-                  "group": 2,
-                  "isLeadFamily": true
-              }
-          ]
-      },
-      "isLeadFamily": true
-  },
-  "email": "ryan.evelynd@gmail.com",
-  "password": "hehehe",
-  "allergy": [
-      "Bees"
-  ]
-}
-function App() {
-  localStorage.setItem("person", JSON.stringify(person));
+function App(props) {
+  let page = props.page
   return (
     <div className="App">
       <div className="Phone">
-        <Meals/>
+        <PageNav page={page}/>
         <div className="Navbar">
-          <div className="Pot">
+          <button className="Pot" onClick={() => props.changePage('meals')}>
             <img src={pot} className="NavIconCenter"/>
-          </div>
-          <div className="Book">
+          </button>
+          <button className="Book" onClick={() => props.changePage('bookings')}>
             <img src={book} className="NavIcon"/>
-          </div>
-          <div className="Lightbulb">
+          </button>
+          <button className="Lightbulb" onClick={() => props.changePage('plan')}>
             <img src={lightbulb} className="NavIcon"></img>
-          </div>
-          <div className="PageIndicator" style={{}} />
+          </button>
+          <div className={"PageIndicator " + page} style={{}} />
         </div>
       </div>
     </div>
   );
-}
-
-
-export default App;
+};
+const mapStateToProps = (state) => {
+  return {
+    page: state.page
+  }
+};
+const mapDispatchToProps = (dispatch) => {
+  return{
+    changePage: (page) => { dispatch({type: 'CHANGE_PAGE', page: page}) }
+  }
+};
+export default connect(mapStateToProps,mapDispatchToProps)(App);

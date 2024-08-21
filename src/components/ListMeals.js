@@ -5,7 +5,7 @@ import EmptyMealEntry from './EmptyMealEntry'
 const ListMeals = () => {
     const [meals, setMeals] = useState([])
     let groupId = 2;
-    let daysBack = 6;
+    let daysBack = 30;
     
     const options = {
         method: 'POST',
@@ -16,8 +16,7 @@ const ListMeals = () => {
     useEffect(() => {
         fetch("http://localhost:8080/api/search/meals",options)
             .then(res => res.json())
-            .then(data => { 
-                console.log(data);    
+            .then(data => {    
                 setMeals(data);
             })       
             .catch(error => console.log(error))                
