@@ -2,54 +2,52 @@ const initState = {
    page: "meals",
    person: {
     "personId": 1,
-    "firstName": "Ryan",
-    "lastName": "Evelyn",
+    "firstName": "Alex",
+    "lastName": "Sample",
     "family": {
         "familyId": 1,
-        "familyName": "The Juice Es",
+        "familyName": "The Samples",
         "familyMembers": [
             1,
             {
                 "personId": 2,
-                "firstName": "H",
-                "lastName": "Evelyn",
+                "firstName": "Jordan",
+                "lastName": "Sample",
                 "family": 1,
-                "email": "Hevelyn@email.com",
-                "password": "hehehe",
+                "email": "jordan@example.com",
                 "allergy": [
                     "mushrooms"
                 ]
             }
         ],
-        "address": "589 W 40 E",
-        "city": "American Fork",
+        "address": "123 Example St",
+        "city": "Springfield",
         "state": "UT",
-        "zip": 84002,
+        "zip": 84000,
         "group": {
             "groupId": 2,
-            "groupName": "CVP",
+            "groupName": "Demo Group",
             "families": [
                 1,
                 {
                     "familyId": 3,
-                    "familyName": "The Preece's",
+                    "familyName": "The Demos",
                     "familyMembers": [
                         {
                             "personId": 4,
-                            "firstName": "Weston",
-                            "lastName": "Evelyn",
+                            "firstName": "Casey",
+                            "lastName": "Demo",
                             "family": 3,
-                            "email": "weston@email.com",
-                            "password": "hehehe",
+                            "email": "casey@example.com",
                             "allergy": [
-                                "pie"
+                                "peanuts"
                             ]
                         }
                     ],
-                    "address": "111 E 205 N",
-                    "city": "Orem",
+                    "address": "456 Sample Ave",
+                    "city": "Springfield",
                     "state": "UT",
-                    "zip": 84058,
+                    "zip": 84000,
                     "group": 2,
                     "isLeadFamily": true
                 }
@@ -57,10 +55,9 @@ const initState = {
         },
         "isLeadFamily": true
     },
-    "email": "ryan@email.com",
-    "password": "hehehe",
+    "email": "alex@example.com",
     "allergy": [
-        "Bees"
+        "bees"
     ]
   }
 }
